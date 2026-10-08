@@ -3,8 +3,8 @@ services:
     name: pagamentos-api
     runtime: docker
     plan: free
-    dockerfilePath: ./pagamentos-mvp/Dockerfile
-    dockerContext: ./pagamentos-mvp
+    dockerfilePath: ./pagamentos-mvp/pagamentos-mvp/Dockerfile
+    dockerContext: ./pagamentos-mvp/pagamentos-mvp
     healthCheckPath: /health
     envVars:
       - key: PAY_API_KEY
