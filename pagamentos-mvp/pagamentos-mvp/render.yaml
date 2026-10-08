@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: pagamentos-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: PAY_API_KEY
+        generateValue: true
+      - key: PAY_WEBHOOK_SECRET
+        generateValue: true
+      - key: PAY_ALLOWED_ORIGIN
+        sync: false
